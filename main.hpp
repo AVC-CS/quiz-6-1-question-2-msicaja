@@ -26,12 +26,33 @@
 
     for (i = 0; i < N; ++i) {
         cin >> id >> name >> depart >> salary;
-        ofs << id << " " << name << " " << depart << " " << salary;
+        ofs << id << " " << name << " " << depart << " " << salary << endl;
     }
 
     return N;
  }
 
  int readFile(string fileName) {
-    return 23;
+    ifstream ifs;
+
+    ifs.open(fileName);
+    if (!ifs) {
+        cout << "File Open Error\n";
+        exit(0);
+    }
+
+    int N, id, i;
+    string depart, name;
+    double salary;
+
+    ifs >> N;
+
+    for (i = 0; i < N; ++i) {
+        ifs >> id >> name >> depart >> salary;
+
+        cout << id << " " << name << " " << depart << " " << salary << endl;
+    }
+
+    return N;
+
  }
