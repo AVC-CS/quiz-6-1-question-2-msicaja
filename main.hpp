@@ -12,11 +12,6 @@
 
     ofs.open(fileName);
 
-    if (!ofs) {
-        cout << "File Open Error\n";
-        exit(0);
-    }
-
     int N, id, i;
     string depart, name;
     double salary;
@@ -36,11 +31,6 @@
     ifstream ifs;
 
     ifs.open(fileName);
-    if (!ifs) {
-        cout << "File Open Error\n";
-        exit(0);
-    }
-
     int N, id, i;
     string depart, name;
     double salary;
