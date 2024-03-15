@@ -33,15 +33,26 @@
     ifs.open(fileName);
     int N, id, i;
     string depart, name;
-    double salary;
+    double salary, sum, avg;
+    sum = 0;
 
     ifs >> N;
+
+    cout << "ID                 Name                 Department         Salary" << endl;
 
     for (i = 0; i < N; ++i) {
         ifs >> id >> name >> depart >> salary;
 
-        cout << id << " " << name << " " << depart << " " << salary << endl;
+        cout << id << "          " << name;
+        cout << "                 " << depart;
+        cout << "         " << salary << endl;
+        sum += salary;
     }
+
+    avg = sum / N;
+    cout << "                                        ";
+    cout << "Total: " << sum << " ";
+    cout << "Average: " << avg << endl;
 
     return N;
 
